@@ -1,0 +1,282 @@
+/* //////////////////////////////////////////////////////////////////// */
+/* /// GLOBAL CSS //////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --colTheme: #09f;
+  --colMainText: #fff;
+  --colSubText: #fff9;
+
+  --sidePadding: 10%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #001;
+  color: #fff;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /// Colours /////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+cmt {
+  color: var(--colMainText)
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /// Home Page Exclusive /////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+.emptyBreak {
+  height: 50px;
+}
+
+/* <div class="emptyBreak" style="height: 100px;"></div> */
+
+.lineBreak {
+  height: 5px;
+  width: 100%;
+  background-color: #0099ff;
+  margin: 25px 0;
+  border: none;
+  border-radius: 10px;
+}
+
+/* <hr class="lineBreak" style="margin-top: 25px; margin-bottom: 25px;"> */
+
+.textBreak {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.textBreak::before, .V1GLOBAL_textBreak::after {
+  flex: 1;
+  content: '';
+  padding: 3px;
+  background-color: #0099ff;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* <div class="textBreak" style="margin-top: 50px; margin-bottom: 50px; font-size: 25px;">Hello</div> */
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /// Home Page Exclusive /////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+.TitleSection {
+  display: block;
+  position: relative;
+  width: -webkit-fill-available;
+  /* height: 400px; */
+  background: linear-gradient(180deg, #06a 13.3%, #005 100%);
+  padding: 50px var(--sidePadding) 50px var(--sidePadding);
+  overflow: hidden;
+  user-select: none;
+}
+
+.TitleSection-LargeTitle {
+  font-family: "Google Sans Code", monospace;
+  font-weight: bolder;
+  font-size: 60px;
+  text-shadow: 0px 0px 10px var(--colSubText);
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* /// CUSTOM /// */
+
+#HomePage-Header-NameTitle {
+  display: inline-block;
+  margin-left: 25px;
+  background: linear-gradient(150deg, #0ff, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.TitleSection-BackgroundIcon {
+  position: absolute;
+  right: 25%;
+  top: 15px;
+  opacity: 0.5;
+  rotate: 20deg;
+}
+
+.TitleSection-BackgroundIcon i {
+  font-size: 300px;
+  text-shadow: 0 10px 10px #06f, 0 20px 10px #f0f;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /// Navigation Bar //////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+  
+#LoadingScreen {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #001;
+  opacity: 1;
+  z-index: 10000000000000000;
+  transition: 0.2s ease-in-out opacity;
+}
+
+.NavigationBar {
+  display: block;
+  background: #06a;
+  font-family: 'Russo One', sans-serif;
+  font-size: 30px;
+  padding: 50px var(--sidePadding) 0 var(--sidePadding);
+  user-select: none;
+}
+
+.NavigationBar a {
+  border: solid 2px transparent;
+  padding: 2.5px 5px;
+  border-radius: 15px;
+  color: var(--colMainText);
+  text-decoration: none;
+  transition: 0.1s ease-in-out color, 0.1s ease-in-out border;
+}
+
+.NavigationBar a:hover {
+  color: var(--colSubText);
+  border: solid 2px var(--colSubText);
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /// Sections  ///////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+.Section {
+  user-select: none;
+  color: var(--colMainText);
+  font-family: fredoka;
+  padding: 50px var(--sidePadding) 50px var(--sidePadding);
+  overflow: hidden;
+}
+
+.Section i {
+  padding-top: 6px;
+  height: 50px;
+  font-size: 40px;
+  color: var(--colTheme);
+}
+
+.Section .sectionTitle {
+  font-size: 40px;
+  display: inline-block;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.Section .sectionText {
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  line-height: 30px;
+  color: var(--colSubText);
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.Section .sectionText a {
+  color: var(--colTheme);
+  transition: 0.2s ease-in-out color;
+}
+
+.Section .sectionText a:hover {
+  color: var(--colMainText);
+}
+
+.Section img {
+  border-radius: 15px;
+  margin-top: 25px;
+  border: solid 2px #555;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 500px !important;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /// Code Block  /////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+.CodeBlock {
+  background: #222;
+  border: solid 2px #555;
+  border-radius: 15px;
+  margin: 25px;
+}
+
+.CodeBlock p {
+  border-bottom: solid 1px #333;
+  min-height: 25px;
+  font-family: "Google Sans Code", monospace;
+  padding-left: 10px;
+  align-content: center;
+}
+
+.CodeBlock cbn {
+  padding-right: 25px;
+}
+
+.CodeBlock cbb { color: #53A1F0; }
+.CodeBlock cblb { color: #A4C8EB; }
+.CodeBlock cbp { color: #A075CE; }
+.CodeBlock cby { color: #F1DF87; }
+.CodeBlock cbo { color: #CC9967; }
+.CodeBlock cbg { color: #088F19; }
+
