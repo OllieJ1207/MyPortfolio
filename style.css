@@ -273,10 +273,10 @@ cmt {
   padding-right: 25px;
 }
 
-.CodeBlock cbb { color: #53A1F0; }
+.CodeBlock cbb { color: #57AAFE; }
 .CodeBlock cblb { color: #A4C8EB; }
 .CodeBlock cbp { color: #A075CE; }
 .CodeBlock cby { color: #F1DF87; }
 .CodeBlock cbo { color: #CC9967; }
 .CodeBlock cbg { color: #088F19; }
-
+.CodeBlock cbgrey { color: #A2A8B2; }
